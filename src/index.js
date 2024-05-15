@@ -13,7 +13,7 @@ app.set("appName", "Express server");
 app.set("port", 3000);
 
 app.use(indexRoutes);
-app.use(employeesRoutes);
+app.use("/api", employeesRoutes);
 
 app.use((req, res) => {
   res.status(404).send("Page Not Found");
